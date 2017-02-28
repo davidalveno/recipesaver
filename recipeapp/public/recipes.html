@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Starter Template - Materialize</title>
+
+    <!-- CSS  -->
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">Logo</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="shopping_list.html">Shopping Lists</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="shopping_list.html">Shopping Lists</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div id="container" class="container">
+            <div class="col s12 m7">
+    <h2 class="header">NAME</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src=' + recipe_obj_image +'>
+      </div>' +
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>recipe_obj.directions</p>
+        </div>
+        <div class="card-action">
+          <a href="#">View</a>
+        </div>
+      </div>
+    </div>
+     </div>
+
+
+            <!-- FAB -->
+            <div data-target="modal" class="fixed-action-btn">
+                <a data-target="modal" class="btn-floating btn-large red">
+                    <i data-target="modal" class="large material-icons">add</i>
+                </a>
+            </div>
+            <br><br>
+
+            <br><br>
+
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <h4>Add New Recipe</h4>
+
+            <div class="input-field col s6">
+                <input id="recipe_name" type="text" class="validate">
+                <label for="recipe_name">Recipe Name</label>
+            </div>
+
+            <label>What type of meal is this?</label>
+            <select id="recipe_type" class="browser-default">
+    <option value="" disabled>Meal Type</option>
+    <option value="1">Breakfast</option>
+    <option value="2">Lunch</option>
+    <option value="3" selected>Dinner</option>
+    <option value="4">Snack</option>
+    <option value="5">Dessert</option>
+  </select>
+
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th class="tableCell" data-field="ingredient">Ingredient</th>
+                        <th class="tableCell" data-field="qty">Qty</th>
+                        <th class="tableCell" data-field="unit">Unit</th>
+                    </tr>
+                </thead>
+
+                <tbody data-bind="foreach: ingredients">
+                    <tr>
+                        <td>
+                            <div class="input-field col s6">
+                                <input data-bind="value: name" type="text" class="validate">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field col s6">
+                                <input data-bind="value: qty" type="text" class="validate">
+                            </div>
+                        </td>
+                        <td>
+                            <select data-bind="options: $root.availableUnits, value: unit, optionsText: 'name'" id="unit" class="browser-default"></select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <textarea id="directions" class="materialize-textarea"></textarea>
+                                <label for="directions">Directions</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+        </div>
+        <div class="modal-footer">
+            <a id="addRecipeButton" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">ADD</a>
+            <a data-bind="click: addIngredient" class=" modal-action modal-close waves-effect waves-green btn-flat">CANCEL</a>
+        </div>
+    </div>
+
+
+
+    <footer class="page-footer orange">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Company Bio Goes Here</h5>
+                    <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Settings</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Link 1</a></li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="white-text" href="#!">Link 3</a></li>
+                        <li><a class="white-text" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Connect</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Link 1</a></li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="white-text" href="#!">Link 3</a></li>
+                        <li><a class="white-text" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/recipes.js"></script>
+
+</body>
+
+</html>

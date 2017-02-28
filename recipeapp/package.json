@@ -1,0 +1,13 @@
+{
+  "name": "recipes",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "2.5.11"
+  },
+  "author": "Joe LeBlanc",
+  "license": "BSD"
+}
