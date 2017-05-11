@@ -16,3 +16,26 @@
 .editable{
     cursor:pointer;
 }
+
+.recipe-image{
+  width: 150px;
+  height: 150px;
+}
+
+.add-button{
+  float: right;
+  position: relative;
+  color: blue;
+  
+}
+
+.add-button:hover{
+  cursor: pointer;
+}
+
+.view {
+  font: blue;
+}
+.view:hover{
+    cursor: pointer;
+}

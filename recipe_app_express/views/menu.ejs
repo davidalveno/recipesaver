@@ -5,89 +5,110 @@
   <header><% include partials/templates/header.ejs %></header>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-        <!-- Menu -->
-        <table class="responsive-table">
-            <thead>
-                <tr>
-                    <th class="tableCell" data-field="blank"></th>
-                    <th class="tableCell" data-field="sun">Sunday</th>
-                    <th class="tableCell" data-field="mon">Monday</th>
-                    <th class="tableCell" data-field="tue">Tuesday</th>
-                    <th class="tableCell" data-field="wed">Wednesday</th>
-                    <th class="tableCell" data-field="thur">Thursday</th>
-                    <th id = "friday" class="tableCell"data-field="fri">Friday</th>
-                    <th class="tableCell" data-field="sat">Saturday</th>
-                </tr>
-            </thead>
+      <!--Menu Name -->
+      <hr>
+      <h3 class="thin" id="menuTitle">Menu Title</h3>
+      <hr>
+      <!--Menu Name -->
+      
+      <!-- Menu -->
+      <table class="responsive-table">
+          <thead>
+              <tr>
+                  <th class="tableCell" data-field="blank"></th>
+                  <th class="tableCell" data-field="sun">Sunday</th>
+                  <th class="tableCell" data-field="mon">Monday</th>
+                  <th class="tableCell" data-field="tue">Tuesday</th>
+                  <th class="tableCell" data-field="wed">Wednesday</th>
+                  <th class="tableCell" data-field="thur">Thursday</th>
+                  <th id = "friday" class="tableCell"data-field="fri">Friday</th>
+                  <th class="tableCell" data-field="sat">Saturday</th>
+              </tr>
+          </thead>
 
-            <tbody>
-                <tr> <!-- 0-Breakfast,1-Lunch, 2-Snack, 3-Dinner,4-Snack, 5-Dessert when acessing the tr elements in tbody -->
-                    <td class="tableCell">
-                    <strong>Breakfast</strong></td> <!-- 1-Sunday,7-Saturday when acessing the td elements in a td -->
-                    <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                </tr>
-                <tr>
-                    <td class="tableCell"><strong>Lunch</strong></td>
-                    <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                </tr>
-                <tr>
-                    <td class="tableCell"><strong>Snack</strong></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                </tr>
-                <tr>
-                    <td class="tableCell"><strong>Dinner</strong></td>
-                    <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                </tr>
-                <tr>
-                    <td class="tableCell"><strong>Dessert</strong></td>
-                    <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                </tr>
-                <tr>
-                    <td class="tableCell"><strong>Snack</strong></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                    <td class="tableCell snack"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
-                </tr>
-            </tbody>
-        </table>
+          <tbody>
+              <tr> <!-- 0-Breakfast,1-Lunch, 2-Snack, 3-Dinner,4-Snack, 5-Dessert when acessing the tr elements in tbody -->
+                  <td class="tableCell">
+                  <strong>Breakfast</strong></td> <!-- 1-Sunday,7-Saturday when acessing the td elements in a td -->
+                  <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell breakfast"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+              </tr>
+              <tr>
+                  <td class="tableCell"><strong>Lunch</strong></td>
+                  <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell lunch"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+              </tr>
+              <tr>
+                  <td class="tableCell"><strong>Snack</strong></td>
+                  <td class="tableCell snack1"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell snack1"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell snack1"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell snack1"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell snack1"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell snack1"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell snack1"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+              </tr>
+              <tr>
+                  <td class="tableCell"><strong>Dinner</strong></td>
+                  <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell dinner"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+              </tr>
+              <tr>
+                  <td class="tableCell"><strong>Dessert</strong></td>
+                  <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell dessert"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+              </tr>
+              <tr>
+                  <td class="tableCell"><strong>Snack</strong></td>
+                  <td class="tableCell snack2"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell snack2"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell snack2"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell snack2"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell snack2"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell snack2"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+                  <td class="tableCell snack2"><a data-target="modal" class="btn-floating btn-large waves-effect waves-light indigo lighten-5"><i class="material-icons">add</i></a></td>
+              </tr>
+          </tbody>
+      </table>
+      <!-- Menu -->
+      
     </div>
   </div>
   
-  <!-- Modal Structure -->
+  <!-- FAB -->
+  <div class="fixed-action-btn horizontal">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">settings</i>
+      </a>
+      <ul>
+        <li><a id="list_btn" class="btn-floating blue"><i class="material-icons">list</i></a></li>
+        <li><a data-target="saveMenuModal" id="save_btn" class="btn-floating green"><i class="material-icons">save</i></a></li>
+        <li><a id="save_btn" class="btn-floating yellow"><i class="material-icons">folder</i></a></li>
+      </ul>
+    </div>
+  <!-- FAB -->
+  
+  <!-- Modal Select Meal -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <h4>Select A Meal</h4>
@@ -104,10 +125,34 @@
     <option value="6">6</option>
     <option value="7">7</option>
   </select>
+   <div class="input-field col s12">
+    <i class="material-icons prefix">textsms</i>
+    <input type="text" id="autocomplete-input" class="autocomplete">
+    <label for="autocomplete-input">Search All</label>
+  </div>
+  
+  
     </div>
+    
     <div class="modal-footer">
       <a href="#!" id="recipeDoneButton" class="modal-action modal-close waves-effect waves-green btn-flat">DONE</a>
     </div>
+    
+  </div>
+  
+    <!-- Modal Save Menu -->
+  <div id="saveMenuModal" class="modal">
+    <div class="modal-content">
+      <h4>Save Menu</h4>
+    <div class="input-field col s12">
+      <input id="menuName" type="text" class="validate">
+      <label for="menuName">Menu Name</label>
+    </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="saveMenuButton" class="modal-action modal-close waves-effect waves-green btn-flat">SAVE</a>
+    </div>
+    
   </div>
   
   <% include partials/templates/footer.ejs %>
