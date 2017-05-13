@@ -1,6 +1,7 @@
 $(document).ready(function(){
   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
   $('.modal').modal();
+  $('.collapsible').collapsible();
     
   // Initialize all variables that will be used
   var dinners = [];
@@ -65,11 +66,23 @@ $(document).ready(function(){
     
   }
 
-  var addRow = function (){
+  var addRow = function (element){
     var row = document.createElement('div');
     row.className = 'row';
-    document.getElementById('container').appendChild(row);
+    element.appendChild(row);
     return row;
+    
+  }
+  
+  var addRecipes = function (recipeArray, mealTypeCollapsible){
+    if (recipeArray.length < 0){return}
+    var row = addRow(mealTypeCollapsible);
+    for (var i = 0; i < recipeArray.length; i++){
+      if (i % 3 == 0){
+        row = addRow(mealTypeCollapsible);
+      }
+      addRecipeCard(recipeArray[i], row);
+      }
     
   }
 
@@ -200,13 +213,11 @@ $(document).ready(function(){
     }
   }
   // adding all of the dinners to the html TODO add other mealtypes
-  var row = addRow();
-  for (var i = 0; i < dinners.length; i++){
-    if (i % 3 == 0){
-      row = addRow();
-    }
-    addRecipeCard(dinners[i], row);
-    }
+  addRecipes(dinners, document.getElementById('dinners-collapsible'));
+  addRecipes(snacks, document.getElementById('snacks-collapsible'));
+  addRecipes(desserts, document.getElementById('desserts-collapsible'));
+  addRecipes(lunches, document.getElementById('lunches-collapsible'));
+  addRecipes(breakfasts, document.getElementById('breakfasts-collapsible'));
   });
     
   // Class to represent a row in the ingredients

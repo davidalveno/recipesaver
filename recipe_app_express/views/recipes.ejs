@@ -5,8 +5,29 @@
   <header><% include partials/templates/header.ejs %></header>
   <div class="section no-pad-bot" id="index-banner">
     <div id="container" class="container">
-        
-    <!-- Recipe Cards Go here programatically -->
+      <!-- this will be where the recipes will go-->
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">filter_drama</i>Breakfasts</div>
+          <div class="collapsible-body" id="breakfasts-collapsible"><!-- Recipe Cards Go here programatically --></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">place</i>Lunches</div>
+          <div class="collapsible-body" id="lunches-collapsible"><!-- Recipe Cards Go here programatically --></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">whatshot</i>Dinners</div>
+          <div class="collapsible-body" id="dinners-collapsible"><!-- Recipe Cards Go here programatically --></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">whatshot</i>Snacks</div>
+          <div class="collapsible-body" id="snacks-collapsible"><!-- Recipe Cards Go here programatically --></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">whatshot</i>Desserts</div>
+          <div class="collapsible-body" id="desserts-collapsible"><!-- Recipe Cards Go here programatically --></div>
+        </li>
+      </ul>
     
     <!-- FAB -->
     <div data-target="modal" class="fixed-action-btn">

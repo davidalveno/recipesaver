@@ -39,3 +39,13 @@
 .view:hover{
     cursor: pointer;
 }
+
+.collapsible-body {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.collapsible-body p {
+  padding: 0px;
+}
+
