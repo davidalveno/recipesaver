@@ -18,6 +18,8 @@ $(document).ready(function(){
   }
   var ingredients;
   var userId = "LSJipcKH0URTIuDUkGNZNoe34Lb2"; // this is my user ID need to figure out login/sesion
+  var centeredRecipe;
+  var recipes;
     
   // Initialize Firebase
   var config = {
@@ -93,6 +95,7 @@ $(document).ready(function(){
     col.className = "col s4";
     var card = document.createElement('div');
     card.className = 'card';
+    card.id = "card " + recipe_obj.id;
     var cardImage = document.createElement('div');
     cardImage.className = 'card-image recipe-image';
     var img = document.createElement('img');
@@ -113,6 +116,7 @@ $(document).ready(function(){
     var view = document.createElement('a');
     view.className = 'view';
     view.innerHTML = 'View';
+    view.id = "view-button " + recipe_obj.id;
     var add = document.createElement('a');
     add.className = 'add-button';
     var icon = document.createElement('i');
@@ -132,8 +136,38 @@ $(document).ready(function(){
     action.appendChild(add);
     add.appendChild(icon);
     // add click event to add and view
-    
+    view.addEventListener('click', viewButtonClicked);
     rowEl.appendChild(col); // add row and card to the row
+  }
+  
+  function getRecipeById (id) {
+    for (var key in recipes){
+      if (recipes[key].id == id) {
+        return recipes[key]; 
+      }
+    }
+    return null;
+  }
+  
+  function enlargeRecipe (id){
+    var card = document.getElementById(id);
+    $(card).animate({height: '800px', width: '900px', top: '50%', left: '50%', margin: '-400px 0 0 -450px', position: 'fixed'}, 400);
+  }
+  
+  function shrinkRecipe (id){
+    var card = document.getElementById(id);
+    card.style.position = 'relative';
+    $(card).animate({height: '200', width: '200px', top: '0px', left: '0px', margin: '0px 0 0 0px'}, 400);
+  }
+  
+  function viewButtonClicked (){
+    var oldCenteredRecipe = centeredRecipe;
+    var id = this.id.replace('view-button ', 'card ');
+    centeredRecipe = getRecipeById(id.replace('card ', ''));
+    enlargeRecipe(id);
+    if (oldCenteredRecipe){
+      shrinkRecipe('card ' + oldCenteredRecipe.id);
+    }
   }
   
   function writeUserData(userId, ingredients, recipe_name, recipe_type, directions, prep_time, cook_time) {
@@ -192,7 +226,7 @@ $(document).ready(function(){
   var recipesRef = firebase.database().ref('/users/' + userId + '/recipes');
   // Getting all recipes and putting them in the right list
   recipesRef.once('value').then(function(snapshot) {
-  var recipes = snapshot.val();
+  recipes = snapshot.val();
   for (key in recipes){
     switch (recipes[key].type){
       case mealTypeEnum.breakfast:
